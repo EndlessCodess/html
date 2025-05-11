@@ -81,13 +81,36 @@
                     </li>
 
                     <li>
-                        <a href="javascript:void(0);">研究方法</a>
+                        <a href="link-post.html">研究方法</a>
                     </li>
                     <li>
-                        <a href="javascript:void(0);">实验过程</a>
+                        <a href="gallery-post.html">实验过程</a>
                     </li>
-                    <li>
-                        <a href="javascript:void(0);">结果分析</a>
+                    <li class="has-submenu">
+                        <a href="#">结果分析</a>
+                        <span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="quote-post.html">描述性统计</a>
+                            </li>
+                            <li>
+                                <a href="quote-post1.html">回归结果分析</a>
+                            </li>
+                            <li class="has-submenu"> 
+                                <a href="#">异质性分析</a>
+                                <ul class="submenu"> 
+                                    <li><a href="quote-post2-1.html">老龄率异质性分析</a></li>
+                                    <li><a href="quote-post2-2.html">区域性异质性分析</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu"> 
+                                <a href="#">稳健性检验</a>
+                                <ul class="submenu"> 
+                                    <li><a href="quote-post3-1.html">平行趋势检验</a></li>
+                                    <li><a href="quote-post3-2.html">安慰剂检验</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="about.html">参考文献</a>
@@ -135,133 +158,50 @@
 
                     <!-- Post-->
                     <article class="post">
-                        <div class="text-center post-header">
-                            <a class="badge badge-custom" href="#" title="">Lifestyle</a>
-                            <h2 class="post-title"><a href="standard-post.html" title="">Runaway A Road Adventure</a>
-                            </h2>
-                            <a href="standard-post.html" title="" class="post-date">Augus 12, 2017</a>
-                        </div>
-
-                        <div class="post-preview">
-                            <div class="link-post">
-                                <div class="link-post-content">
-                                    <i class="mdi mdi-link-variant"></i>
-                                    <h5><a href="#">Themeswale - Bootstrap Themes & Templates</a></h5>
-                                    <p>
-                                        http://themeswale.com/
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
 
                         <div class="blog-detail-description">
-                            <p>Donec eleifend accumsan nibh eu efficitur. Vivamus lacinia ut turpis egestas convallis.
-                                Quisque nec accumsan justo. Maecenas auctor in nulla nec tincidunt. Pellentesque rutrum
-                                molestie tortor, ut egestas risus commodo a. Praesent a orci nec libero fringilla
-                                euismod eu id massa. Nunc eget bibendum odio, sed sodales eros.Vivamus lacinia, mi eu
-                                ultrices mattis.</p>
 
-                            <p>Donec eleifend accumsan nibh eu efficitur. Vivamus lacinia ut turpis egestas convallis.
-                                Quisque nec accumsan justo. Maecenas auctor in nulla nec tincidunt. Pellentesque rutrum
-                                molestie tortor, ut egestas risus commodo a. Praesent a orci nec libero fringilla
-                                euismod eu id massa. Nunc eget bibendum odio, sed sodales eros.Vivamus lacinia, mi eu
-                                ultrices mattis.</p>
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">双重差分模型</a>
+                                </h2>
+                            </div>
 
-                            <blockquote class="blockquote text-center">
-                                <h6 class="mb-0 blockquote-text">Praesent consectetur vel dui sed molestie. Aliquam
-                                    imperdiet cursus dapibus. Quisque vestibulum blandit tellus, nec volutpat turpis.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                                    ante.</h6>
-                                <footer class="blockquote-footer mt-2">Someone famous in <cite
-                                        title="Source Title">Source Title</cite></footer>
-                            </blockquote>
+                            <p> &emsp;&emsp;<b>双重差分模型（Difference-in-Differences, DID）</b>​​是一种常用的政策评估方法，通过比较处理组和对照组在政策实施前后的差异来识别因果效应。其核心思路是进行两次差分：首先分别计算处理组和对照组在政策前后的结果变化，再将两组的变化值相减，最终得到的差值即为政策效应。这种方法通过引入处理组虚拟变量、时间虚拟变量及二者的交互项，将政策效应转化为可量化的回归系数。</p>
+                            
+                            <div class="post-preview">
+                                <img src="images/data/DID.png" alt="" style="display: block; margin: 0 auto; max-width: 75%; height: auto;" class="img-fluid rounded">
+                            </div>
 
-                            <p>Quisque nec accumsan justo. Maecenas auctor in nulla nec tincidunt. Pellentesque rutrum
-                                molestie tortor, ut egestas risus commodo a. Praesent a orci nec libero fringilla
-                                euismod eu id massa. Nunc eget bibendum odio, sed sodales eros.Vivamus lacinia, mi eu
-                                ultrices mattis.</p>
+                            <p> &emsp;&emsp;<b>DID模型的有效性依赖于平行趋势假设</b>​​，即假设在没有政策干预的情况下，处理组和对照组的结果变化趋势应保持一致。为验证这一假设，研究者通常需进行政策实施前的趋势检验或事件研究分析。该模型适用于面板数据或重复横截面数据，在经济学、公共政策评估和医学研究等领域具有广泛应用，能够有效控制不可观测的混杂因素，提高政策效果评估的可靠性。</p> 
+
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">自然语言处理</a>
+                                </h2>
+                            </div>    
+
+                            <p> &emsp;&emsp;<b>​自然语言处理（Natural Language Processing, NLP）</b>是人工智能的核心领域之一，旨在让计算机能够理解、解释和生成人类语言。NLP 结合了计算机科学、语言学和机器学习，研究如何让机器处理文本或语音数据，执行诸如翻译、情感分析、文本摘要、问答系统等任务。早期的 NLP 依赖基于规则的方法（如语法解析）和统计模型（如隐马尔可夫模型），但随着深度学习的兴起，现代 NLP 主要采用神经网络，尤其是 Transformer 架构（如 BERT、GPT），能够更精准地捕捉语言的语义和上下文关系。NLP 的应用广泛，包括智能客服、搜索引擎优化、自动文本生成、语音识别等，是推动人机交互智能化的重要技术。</p> 
+
+                            <div class="post-preview">
+                                <img src="images/data/NLP.png" alt="" style="display: block; margin: 0 auto; max-width: 60%; height: auto;" class="img-fluid rounded">
+                            </div>
+
+                            <p> &emsp;&emsp;<b>Sentence-BERT（SBERT）</b>​​​​是针对句子语义相似度优化的BERT变体。它通过孪生网络结构对句子编码，生成固定长度的句向量，使相似度计算（如余弦相似度）更高效。相比原始BERT需遍历所有句子对，SBERT预存向量后直接比较，速度提升千倍，广泛应用于检索系统、聚类和语义匹配任务，成为NLP领域句子级表示的标杆模型。</p> 
 
                             <div class="mt-5">
-                                <h6>Tags:</h6>
+                                <h6>标签:</h6>
                                 <div class="tagcloud">
-                                    <a href="#">logo</a>
-                                    <a href="#">business</a>
-                                    <a href="#">agency</a>
+                                    <a href="#">长期护理保险</a>
+                                    <a href="#">市场创新</a>
+                                    <a href="#">量化回归模型</a>
+                                    <a href="#">实证分析</a>
+                                    <a href="#">DID</a>
+                                    <a href="#">NLP</a>
                                 </div>
                             </div>
 
-
-                            <div class="media post-author-box">
-                                <img class="d-flex mr-3 rounded-circle" src="images/user/user-5.png"
-                                    alt="Generic placeholder image">
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="">Michelle Durant</a></h4>
-                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra
-                                        euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing
-                                        in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis
-                                        placerat, felis enim.</p>
-
-                                    <ul class="socials list-unstyled mb-0 mt-3">
-                                        <li><a href="#"><i class="mdi mdi-facebook"></i></a></li>
-                                        <li><a href="#"><i class="mdi mdi-twitter"></i></a></li>
-                                        <li><a href="#"><i class="mdi mdi-instagram"></i></a></li>
-                                        <li><a href="#"><i class="mdi mdi-pinterest"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="mt-5 text-center">
-                                <h5 class="page-title-alt"><span>You Might Also Like</span></h5>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <article class="related-post">
-                                        <div class="post-preview">
-                                            <a href="blog-single.html"><img src="images/blog/blog-2.jpg" alt=""
-                                                    class="img-fluid rounded"></a>
-                                        </div>
-
-                                        <div class="post-header">
-                                            <h6><a href="single-post2.html" title="">15 Best Healthy and Easy Salad
-                                                    Recipes</a></h6>
-                                            <p class="post-date">August 12, 2017</p>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="col-sm-4">
-                                    <article class="related-post">
-                                        <div class="post-preview">
-                                            <a href="blog-single.html"><img src="images/blog/blog-3.jpg" alt=""
-                                                    class="img-fluid rounded"></a>
-                                        </div>
-
-                                        <div class="post-header">
-                                            <h6><a href="single-post2.html" title="">The planet doesn’t need saving. We
-                                                    do.</a></h6>
-                                            <p class="post-date">August 17, 2017</p>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="col-sm-4">
-                                    <article class="related-post">
-                                        <div class="post-preview">
-                                            <a href="blog-single.html"><img src="images/blog/blog-4.jpg" alt=""
-                                                    class="img-fluid rounded"></a>
-                                        </div>
-
-                                        <div class="post-header">
-                                            <h6><a href="single-post2.html" title="">Modern City With Amazing Dark Blue
-                                                    Sea</a></h6>
-                                            <p class="post-date">August 20, 2017</p>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
 
                             <div class="mt-5">
-                                <h5 class="page-title-alt"><span>Comments</span></h5>
+                                <h5 class="page-title-alt"><span>评论</span></h5>
                             </div>
 
                             <ul class="media-list list-unstyled">
@@ -271,59 +211,11 @@
                                         alt="Generic placeholder image">
                                     <div class="media-body">
                                         <a href="#" class="text-custom reply-btn"><i class="mdi mdi-reply"></i>&nbsp;
-                                            Reply</a>
-                                        <h4 class="media-heading"><a href="">Michelle Durant</a></h4>
-                                        <p class="text-muted post-date">Jun 23, 2017, 11:45 am</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod
-                                            odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in
-                                            adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis
-                                            placerat, felis enim.</p>
-                                    </div>
-                                </li>
-
-
-                                <li class="media">
-                                    <img class="d-flex mr-3 rounded-circle" src="images/user/user-2.png"
-                                        alt="Generic placeholder image">
-                                    <div class="media-body">
-                                        <a href="#" class="text-custom reply-btn"><i class="mdi mdi-reply"></i>&nbsp;
-                                            Reply</a>
-                                        <h4 class="media-heading"><a href="">Ronda Otoole</a></h4>
-                                        <p class="text-muted post-date">Jun 23, 2017, 11:45 am</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod
-                                            odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in
-                                            adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis
-                                            placerat, felis enim.</p>
-
-                                        <div class="media">
-                                            <img class="d-flex mr-3 rounded-circle" src="images/user/user-3.png"
-                                                alt="Generic placeholder image">
-                                            <div class="media-body">
-                                                <a href="#" class="text-custom reply-btn"><i
-                                                        class="mdi mdi-reply"></i>&nbsp; Reply</a>
-                                                <h4 class="media-heading"><a href="">James Whitley</a></h4>
-                                                <p class="text-muted post-date">Jun 23, 2017, 11:45 am</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra
-                                                    euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem,
-                                                    adipiscing in adipiscing et, interdum nec metus. Mauris ultricies,
-                                                    justo eu convallis placerat, felis enim.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="media">
-                                    <img class="d-flex mr-3 rounded-circle" src="images/user/user-4.png"
-                                        alt="Generic placeholder image">
-                                    <div class="media-body">
-                                        <a href="#" class="text-custom reply-btn"><i class="mdi mdi-reply"></i>&nbsp;
-                                            Reply</a>
-                                        <h4 class="media-heading"><a href="">Kimberly Chretien</a></h4>
-                                        <p class="text-muted post-date">Jun 23, 2017, 11:45 am</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod
-                                            odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in
-                                            adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis
-                                            placerat, felis enim.</p>
+                                            回复</a>
+                                        <h4 class="media-heading"><a href="">汤姆</a></h4>
+                                        <p class="text-muted post-date">May 11, 2025, 11:45 am</p>
+                                        <p>长期护理好像是老了以后需要的持续照料？虽然现在用不上，但想到以后老了可能得靠它
+                                            ，还是有点担心费用和条件，得提前了解一下</p>
                                     </div>
                                 </li>
 
@@ -332,13 +224,11 @@
                                         alt="Generic placeholder image">
                                     <div class="media-body">
                                         <a href="#" class="text-custom reply-btn"><i class="mdi mdi-reply"></i>&nbsp;
-                                            Reply</a>
-                                        <h4 class="media-heading"><a href="">Michelle Durant</a></h4>
-                                        <p class="text-muted post-date">Jun 23, 2017, 11:45 am</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod
-                                            odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in
-                                            adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis
-                                            placerat, felis enim.</p>
+                                            回复</a>
+                                        <h4 class="media-heading"><a href="">杰瑞</a></h4>
+                                        <p class="text-muted post-date">May 11, 2025, 2:45 pm</p>
+                                        <p>长期护理，感觉离我有点远啊，况且我身体这么健康，我老了肯定不至于走不动路，
+                                            这个长护险制度对我的意义在哪儿。</p>
                                     </div>
                                 </li>
 
@@ -346,7 +236,7 @@
 
 
                             <div class="mt-5">
-                                <h5 class="page-title-alt"><span>Leave a reply</span></h5>
+                                <h5 class="page-title-alt"><span>发表评论</span></h5>
                             </div>
 
                             <form action="#" method="post" class="mt-4">
@@ -365,14 +255,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input id="subject" class="form-control" placeholder="Website"
-                                                name="subject" type="text">
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -386,8 +268,8 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <button name="submit" type="submit" id="submit" class="btn btn-dark">Post
-                                                Comment</button>
+                                            <button name="submit" type="submit" id="submit"
+                                                class="btn btn-dark">发布</button>
                                         </div>
                                     </div>
                                 </div>
@@ -408,112 +290,46 @@
                 <div class="col-lg-4">
                     <div class="sidebar">
 
-                        <aside class="widget widget_search">
-                            <form>
-                                <input class="form-control" type="search" placeholder="Search...">
-                                <button class="search-button" type="submit"><span
-                                        class="mdi mdi-magnify"></span></button>
-                            </form>
-                        </aside>
-
                         <!-- About widget-->
                         <aside class="widget">
-                            <div class="widget-title">About Me</div>
+                            <div class="widget-title">简介</div>
 
                             <div class="about-widget">
-                                <img src="images/photo.jpg" alt="About Me" class="rounded-circle">
+                                <img src="images/photo.jpg" alt="About" class="rounded-circle">
 
-                                <p>Quis vero phasellus hac nullam, in quam vitae duis adipiscing mauris leo, laoreet
-                                    eget at quis, ante vestibulum vivamus vel. Sapien lobortis, eget orci purus amet
-                                    pede, consectetur neque risus.</p>
+                                <p>长期护理险（Long term care insurance），简称长护险，是针对那些身体衰弱
+                                    、生活不能自理或者不能完全自理，需要他人辅助全部或部分日常生活的被保险人，为其在护理院、
+                                    医院和家中接受的长期医疗护理或者照顾性护理服务提供经济保障的保险。中国的长期护理保险是
+                                    社会保险的一部分，被称为在养老、医疗、工伤、失业、生育五项社会保险之外的社保“第六险”。</p>
 
-                                <a href="#" class="btn-read-more mt-2">Read More <i class="mdi mdi-arrow-right"></i></a>
+                                <a href="standard-post.html" class="btn-read-more mt-2">了解更多<i
+                                        class="mdi mdi-arrow-right"></i></a>
                             </div>
                         </aside>
 
 
                         <!-- Social widget-->
                         <aside class="widget">
-                            <div class="widget-title">Subscribe & Follow</div>
+                            <div class="widget-title">订阅 & 关注</div>
 
                             <ul class="socials">
-                                <li><a href="#"><i class="mdi mdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="mdi mdi-qqchat"></i></a></li>
+                                <li><a href="#"><i class="mdi mdi-wechat"></i></a></li>
                                 <li><a href="#"><i class="mdi mdi-twitter"></i></a></li>
-                                <li><a href="#"><i class="mdi mdi-instagram"></i></a></li>
-                                <li><a href="#"><i class="mdi mdi-pinterest"></i></a></li>
+                                <li><a href="#"><i class="mdi mdi-facebook"></i></a></li>
                             </ul>
-                        </aside>
-
-                        <!-- Categories widget-->
-                        <aside class="widget widget_categories">
-                            <div class="widget-title">Categories</div>
-                            <ul>
-                                <li><a href="#">Journey</a> <span class="float-right">(40)</span></li>
-                                <li><a href="#">Photography</a> <span class="float-right">(11)</span></li>
-                                <li><a href="#">Lifestyle</a> <span class="float-right">(09)</span></li>
-                                <li><a href="#">Food & Drinks</a> <span class="float-right">(28)</span></li>
-                            </ul>
-                        </aside>
-
-                        <!-- Recent entries widget-->
-                        <aside class="widget widget_recent_entries_custom">
-                            <div class="widget-title">Popular Posts</div>
-                            <ul>
-                                <li class="clearfix">
-                                    <div class="wi"><a href="#"><img src="images/blog/blog-1.jpg" alt=""
-                                                class="img-fluid"></a></div>
-                                    <div class="wb"><a href="#">Beautiful Day With Friends..</a> <span
-                                            class="post-date">Jun 15, 2017</span></div>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="wi"><a href="#"><img src="images/blog/blog-2.jpg" alt=""
-                                                class="img-fluid"></a></div>
-                                    <div class="wb"><a href="#">Nature valley with cooling..</a> <span
-                                            class="post-date">Jun 10, 2017</span></div>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="wi"><a href="#"><img src="images/blog/blog-3.jpg" alt=""
-                                                class="img-fluid"></a></div>
-                                    <div class="wb"><a href="#">15 Best Healthy and Easy Salad..</a> <span
-                                            class="post-date">Jun 8, 2017</span></div>
-                                </li>
-                            </ul>
-                        </aside>
-
-                        <!-- Text widget-->
-                        <aside class="widget">
-                            <div class="widget-title">Text Widget</div>
-
-                            <p class="text-muted text-widget-des">Exercitation photo booth stumptown tote bag Banksy,
-                                elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit
-                                kale chips proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod
-                                Pinterest in do umami readymade swag. </p>
-
-                        </aside>
-
-                        <!-- Archives widget-->
-                        <aside class="widget widget_archive">
-                            <div class="widget-title">Archives</div>
-
-                            <ul>
-                                <li><a href="#">March 2017</a> <span class="float-right">(32)</span></li>
-                                <li><a href="#">April 2017</a> <span class="float-right">(09)</span></li>
-                                <li><a href="#">May 2017</a> <span class="float-right">(81)</span></li>
-                                <li><a href="#">Jun 2017</a> <span class="float-right">(12)</span></li>
-                            </ul>
-
                         </aside>
 
                         <!-- Tags widget-->
                         <aside class="widget widget_tag_cloud">
-                            <div class="widget-title">Tags</div>
+                            <div class="widget-title">标签</div>
                             <div class="tagcloud">
-                                <a href="#">logo</a>
-                                <a href="#">business</a>
-                                <a href="#">corporate</a>
-                                <a href="#">e-commerce</a>
-                                <a href="#">agency</a>
-                                <a href="#">responsive</a>
+                                <a href="#">长期护理保险</a>
+                                <a href="#">市场创新</a>
+                                <a href="#">量化回归模型</a>
+                                <a href="#">实证分析</a>
+                                <a href="#">DID</a>
+                                <a href="#">NLP</a>
                             </div>
                         </aside>
                     </div>
