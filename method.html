@@ -69,51 +69,51 @@
                         <span class="menu-arrow"></span>
                         <ul class="submenu">
                             <li>
-                                <a href="standard-post.html">长期护理</a>
+                                <a href="background-1.html">长期护理</a>
                             </li>
                             <li>
-                                <a href="video-post.html">长期护理保险制度</a>
+                                <a href="background-2.html">长期护理保险制度</a>
                             </li>
                             <li>
-                                <a href="audio-post.html">长期护理试点城市</a>
+                                <a href="background-3.html">长期护理试点城市</a>
                             </li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="link-post.html">研究方法</a>
+                        <a href="method.html">研究方法</a>
                     </li>
                     <li>
-                        <a href="gallery-post.html">实验过程</a>
+                        <a href="process.html">实验过程</a>
                     </li>
                     <li class="has-submenu">
                         <a href="#">结果分析</a>
                         <span class="menu-arrow"></span>
                         <ul class="submenu">
                             <li>
-                                <a href="quote-post.html">描述性统计</a>
+                                <a href="description.html">描述性统计</a>
                             </li>
                             <li>
-                                <a href="quote-post1.html">回归结果分析</a>
+                                <a href="regression.html">回归结果分析</a>
                             </li>
                             <li class="has-submenu"> 
                                 <a href="#">异质性分析</a>
                                 <ul class="submenu"> 
-                                    <li><a href="quote-post2-1.html">老龄率异质性分析</a></li>
-                                    <li><a href="quote-post2-2.html">区域性异质性分析</a></li>
+                                    <li><a href="old-ratio.html">老龄率异质性分析</a></li>
+                                    <li><a href="location.html">区域性异质性分析</a></li>
                                 </ul>
                             </li>
                             <li class="has-submenu"> 
                                 <a href="#">稳健性检验</a>
                                 <ul class="submenu"> 
-                                    <li><a href="quote-post3-1.html">平行趋势检验</a></li>
-                                    <li><a href="quote-post3-2.html">安慰剂检验</a></li>
+                                    <li><a href="parall.html">平行趋势检验</a></li>
+                                    <li><a href="comfort.html">安慰剂检验</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="about.html">参考文献</a>
+                        <a href="reference.html">参考文献</a>
                     </li>
                     <li>
                         <a href="contact.html">联系作者</a>
@@ -158,17 +158,34 @@
 
                     <!-- Post-->
                     <article class="post">
-                        <div class="text-center post-header">
-                            <h2 class="post-title"><a href="quote-post1.html" title="">回归结果分析</a>
-                            </h2>
-                        </div>
 
                         <div class="blog-detail-description">
-                            <p> &emsp;&emsp;本文一共利用了52735个专利观测样本，通过负二项回归模型的方式来检验长期护理保险政策，对于长期护理相关专利创新的影响研究。通过实证结果，我们可以发现，模型的伪R²为0.2445，表明模型的解释力较强。而在核心变量中，双重交叉项did的系数为0.144（p=0.021），转化为发生率比IRR，表明长期护理保险政策在实施后，对于试点城市的长期护理产业的专利创新，有积极的促进作用，平均使得相应专利数量提升了15.5%，验证了本文的核心假设。经济规模（ln_GDP）系数为0.436（p<0.01），这表明地区GDP每增长1%，相应的专利产出的增加比例约为54.7%，这也符合经济基础对技术创新的支撑作用。研发强度（R&D_ratio）系数为0.106（p=0.011），这表明区域的研发投入，每提高1%，它的专利数量大致增长为原来的1.12倍，这也符合加大科研投入，对于专利创新的促进作用。值得注意的是，邻近效应（neighbor）系数为-0.216（p<0.01），这表明邻近城市每增加1%的专利量，本地的专利反而会减少约19.5%，这种情况的出现，可能源于区域竞争而导致出现的资源虹吸现象。总的来说，长期护理保险政策，不仅直接促进了相应产业的创新，并且还表现出了显著的经济规模依赖性以及空间异质性。</p>
+
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">双重差分模型</a>
+                                </h2>
+                            </div>
+
+                            <p> &emsp;&emsp;<b>双重差分模型（Difference-in-Differences, DID）</b>​​是一种常用的政策评估方法，通过比较处理组和对照组在政策实施前后的差异来识别因果效应。其核心思路是进行两次差分：首先分别计算处理组和对照组在政策前后的结果变化，再将两组的变化值相减，最终得到的差值即为政策效应。这种方法通过引入处理组虚拟变量、时间虚拟变量及二者的交互项，将政策效应转化为可量化的回归系数。</p>
+                            
+                            <div class="post-preview">
+                                <img src="images/data/DID.png" alt="" style="display: block; margin: 0 auto; max-width: 75%; height: auto;" class="img-fluid rounded">
+                            </div>
+
+                            <p> &emsp;&emsp;<b>DID模型的有效性依赖于平行趋势假设</b>​​，即假设在没有政策干预的情况下，处理组和对照组的结果变化趋势应保持一致。为验证这一假设，研究者通常需进行政策实施前的趋势检验或事件研究分析。该模型适用于面板数据或重复横截面数据，在经济学、公共政策评估和医学研究等领域具有广泛应用，能够有效控制不可观测的混杂因素，提高政策效果评估的可靠性。</p> 
+
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">自然语言处理</a>
+                                </h2>
+                            </div>    
+
+                            <p> &emsp;&emsp;<b>​自然语言处理（Natural Language Processing, NLP）</b>是人工智能的核心领域之一，旨在让计算机能够理解、解释和生成人类语言。NLP 结合了计算机科学、语言学和机器学习，研究如何让机器处理文本或语音数据，执行诸如翻译、情感分析、文本摘要、问答系统等任务。早期的 NLP 依赖基于规则的方法（如语法解析）和统计模型（如隐马尔可夫模型），但随着深度学习的兴起，现代 NLP 主要采用神经网络，尤其是 Transformer 架构（如 BERT、GPT），能够更精准地捕捉语言的语义和上下文关系。NLP 的应用广泛，包括智能客服、搜索引擎优化、自动文本生成、语音识别等，是推动人机交互智能化的重要技术。</p> 
 
                             <div class="post-preview">
-                                <img src="images/data/result.png" alt="" style="display: block; margin: 0 auto; max-width: 60%; height: auto;" class="img-fluid rounded">
+                                <img src="images/data/NLP.png" alt="" style="display: block; margin: 0 auto; max-width: 60%; height: auto;" class="img-fluid rounded">
                             </div>
+
+                            <p> &emsp;&emsp;<b>Sentence-BERT（SBERT）</b>​​​​是针对句子语义相似度优化的BERT变体。它通过孪生网络结构对句子编码，生成固定长度的句向量，使相似度计算（如余弦相似度）更高效。相比原始BERT需遍历所有句子对，SBERT预存向量后直接比较，速度提升千倍，广泛应用于检索系统、聚类和语义匹配任务，成为NLP领域句子级表示的标杆模型。</p> 
 
                             <div class="mt-5">
                                 <h6>标签:</h6>
@@ -285,7 +302,7 @@
                                     医院和家中接受的长期医疗护理或者照顾性护理服务提供经济保障的保险。中国的长期护理保险是
                                     社会保险的一部分，被称为在养老、医疗、工伤、失业、生育五项社会保险之外的社保“第六险”。</p>
 
-                                <a href="standard-post.html" class="btn-read-more mt-2">了解更多<i
+                                <a href="background-1.html" class="btn-read-more mt-2">了解更多<i
                                         class="mdi mdi-arrow-right"></i></a>
                             </div>
                         </aside>

@@ -69,51 +69,51 @@
                         <span class="menu-arrow"></span>
                         <ul class="submenu">
                             <li>
-                                <a href="standard-post.html">长期护理</a>
+                                <a href="background-1.html">长期护理</a>
                             </li>
                             <li>
-                                <a href="video-post.html">长期护理保险制度</a>
+                                <a href="background-2.html">长期护理保险制度</a>
                             </li>
                             <li>
-                                <a href="audio-post.html">长期护理试点城市</a>
+                                <a href="background-3.html">长期护理试点城市</a>
                             </li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="link-post.html">研究方法</a>
+                        <a href="method.html">研究方法</a>
                     </li>
                     <li>
-                        <a href="gallery-post.html">实验过程</a>
+                        <a href="process.html">实验过程</a>
                     </li>
                     <li class="has-submenu">
                         <a href="#">结果分析</a>
                         <span class="menu-arrow"></span>
                         <ul class="submenu">
                             <li>
-                                <a href="quote-post.html">描述性统计</a>
+                                <a href="description.html">描述性统计</a>
                             </li>
                             <li>
-                                <a href="quote-post1.html">回归结果分析</a>
+                                <a href="regression.html">回归结果分析</a>
                             </li>
                             <li class="has-submenu"> 
                                 <a href="#">异质性分析</a>
                                 <ul class="submenu"> 
-                                    <li><a href="quote-post2-1.html">老龄率异质性分析</a></li>
-                                    <li><a href="quote-post2-2.html">区域性异质性分析</a></li>
+                                    <li><a href="old-ratio.html">老龄率异质性分析</a></li>
+                                    <li><a href="location.html">区域性异质性分析</a></li>
                                 </ul>
                             </li>
                             <li class="has-submenu"> 
                                 <a href="#">稳健性检验</a>
                                 <ul class="submenu"> 
-                                    <li><a href="quote-post3-1.html">平行趋势检验</a></li>
-                                    <li><a href="quote-post3-2.html">安慰剂检验</a></li>
+                                    <li><a href="parall.html">平行趋势检验</a></li>
+                                    <li><a href="comfort.html">安慰剂检验</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="about.html">参考文献</a>
+                        <a href="reference.html">参考文献</a>
                     </li>
                     <li>
                         <a href="contact.html">联系作者</a>
@@ -159,17 +159,22 @@
                     <!-- Post-->
                     <article class="post">
                         <div class="text-center post-header">
-                            <h2 class="post-title"><a href="quote-post.html" title="">描述性统计</a>
+                            <h2 class="post-title"><a href="parall.html" title="">平行趋势检验</a>
                             </h2>
                         </div>
 
                         <div class="blog-detail-description">
-                            <p> &emsp;&emsp;本文使用的专利数据的时间跨度为2012-2023年。核心变量的描述如下，被解释变量专利数量（patent_count）的均值为23.97件，它的标准差为44.55，整体数据呈现出显著过离散的特征（即方差远大于均值），因此需要采用负二项回归模型（Cameron & Trivedi, 2005）。其中核心解释变量为双重差分项（did），它的均值为0.08，表明8%的样本位于政策后处理状态。在控制变量中，经济规模（ln_GDP）的均值为7.95（对数GDP），研发强度（R&D_ratio）的均值为0.3%，可以反映出区域创新资源分布的不均衡。邻近效应（neighbor）的均值为0.07，提示区域创新存在弱空间依赖性。平行趋势检验显示，处理组与对照组在政策前的专利数量，并没有显著的差异，因此满足了DID模型使用的基础前提假设。</p>
+                            <p> &emsp;&emsp;平行趋势假设是进行双重差分不可或缺的核心前提条件。这个假设一般认为，在没有任何处理的情况下，各个观测对象的结果，会随着时间的流逝，以相同的方式变化，即如果没有政策干预，试点城市与非试点城市的专利创新，本身具有相同的变化趋势。</p>
+
+                            <p> &emsp;&emsp;根据平行趋势检验结果，我们可以发现，长期护理保险试点政策推广的前三年（2017-2019年），处理组与对照组的长期护理专利技术的创新趋势，几乎没有显著的差异，并且几乎所有的DID系数都在零值附近波动，它们的置信区间均覆盖零且并没有呈现出系统性的偏移，满足了双重差分模型使用前的核心假设。这一稳健性检验结果，显示出试点城市与非试点城市，在政策实施前的创新活动的发展趋势具有可比性，可以说明结果是因为长护险制度本身，而非一些其他的干扰因素。</p>
+                            
+                            <p> &emsp;&emsp;通过动态效应分析，也反映出了政策效果的不断增强特征。政策扩大推广首年（2021年）已经产生了正向激励（post1系数0.4），开了一个好头，之后正向激励效应开始下降，至政策第三年（2023年）达到低值（post3系数0.21），这与专利数据的滞后性可能有关，因为时间里本文撰写时间较近，存在一些滞后性，对于医疗系统的场景适配，通常均需2-3年落地周期。但这也能证明政策效果的持续性，这体现出长护险不仅触发了短期的市场反应，更可能形成了政策-市场协同演化的长效机制，能够源源不断地发挥政策效果，助力于长期护理产业的专利创新。</p>
 
                             <div class="post-preview">
-                                <img src="images/data/description.png" alt="" style="display: block; margin: 0 auto; max-width: 60%; height: auto;" class="img-fluid rounded">
+                                <img src="images/data/parall.png" alt=""
+                                    style="display: block; margin: 0 auto; max-width: 80%; height: auto;"
+                                    class="img-fluid rounded">
                             </div>
-
 
                             <div class="mt-5">
                                 <h6>标签:</h6>
@@ -286,7 +291,7 @@
                                     医院和家中接受的长期医疗护理或者照顾性护理服务提供经济保障的保险。中国的长期护理保险是
                                     社会保险的一部分，被称为在养老、医疗、工伤、失业、生育五项社会保险之外的社保“第六险”。</p>
 
-                                <a href="standard-post.html" class="btn-read-more mt-2">了解更多<i
+                                <a href="background-1.html" class="btn-read-more mt-2">了解更多<i
                                         class="mdi mdi-arrow-right"></i></a>
                             </div>
                         </aside>

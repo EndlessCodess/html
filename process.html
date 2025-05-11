@@ -69,51 +69,51 @@
                         <span class="menu-arrow"></span>
                         <ul class="submenu">
                             <li>
-                                <a href="standard-post.html">长期护理</a>
+                                <a href="background-1.html">长期护理</a>
                             </li>
                             <li>
-                                <a href="video-post.html">长期护理保险制度</a>
+                                <a href="background-2.html">长期护理保险制度</a>
                             </li>
                             <li>
-                                <a href="audio-post.html">长期护理试点城市</a>
+                                <a href="background-3.html">长期护理试点城市</a>
                             </li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="link-post.html">研究方法</a>
+                        <a href="method.html">研究方法</a>
                     </li>
                     <li>
-                        <a href="gallery-post.html">实验过程</a>
+                        <a href="process.html">实验过程</a>
                     </li>
                     <li class="has-submenu">
                         <a href="#">结果分析</a>
                         <span class="menu-arrow"></span>
                         <ul class="submenu">
                             <li>
-                                <a href="quote-post.html">描述性统计</a>
+                                <a href="description.html">描述性统计</a>
                             </li>
                             <li>
-                                <a href="quote-post1.html">回归结果分析</a>
+                                <a href="regression.html">回归结果分析</a>
                             </li>
                             <li class="has-submenu"> 
                                 <a href="#">异质性分析</a>
                                 <ul class="submenu"> 
-                                    <li><a href="quote-post2-1.html">老龄率异质性分析</a></li>
-                                    <li><a href="quote-post2-2.html">区域性异质性分析</a></li>
+                                    <li><a href="old-ratio.html">老龄率异质性分析</a></li>
+                                    <li><a href="location.html">区域性异质性分析</a></li>
                                 </ul>
                             </li>
                             <li class="has-submenu"> 
                                 <a href="#">稳健性检验</a>
                                 <ul class="submenu"> 
-                                    <li><a href="quote-post3-1.html">平行趋势检验</a></li>
-                                    <li><a href="quote-post3-2.html">安慰剂检验</a></li>
+                                    <li><a href="parall.html">平行趋势检验</a></li>
+                                    <li><a href="comfort.html">安慰剂检验</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="about.html">参考文献</a>
+                        <a href="reference.html">参考文献</a>
                     </li>
                     <li>
                         <a href="contact.html">联系作者</a>
@@ -158,27 +158,45 @@
 
                     <!-- Post-->
                     <article class="post">
-                        <div class="text-center post-header">
-                            <h2 class="post-title"><a href="audio-post.html" title="">长期护理试点城市</a>
-                            </h2>
-                        </div>
 
                         <div class="blog-detail-description">
-                            <p> &emsp;&emsp;2016年，我国在15个城市启动长期护理保险制度试点，包括上海、青岛、长春等地，重点解决失能老人的基本护理需求。试点由医保基金划拨资金，覆盖城镇职工医保参保人群，采用"以服务给付为主、现金补贴为辅"的模式。参保人经评估达到重度失能标准后，可享受机构护理、居家护理等服务，或领取定额护理补贴。这一阶段主要探索筹资机制、评估标准和服务体系，为全国推广积累经验，标志着我国开始系统性应对老龄化社会的护理保障问题。</p>
+
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">一.数据预处理</a>
+                                </h2>
+                            </div>
+
+                            <p> &emsp;&emsp;本研究利用IncoPat专利数据库，系统检索长期护理保险相关的专利数据（主要基于IPC分类号G16H50/30、A61B5/00等核心类别）。为提升数据精准度，创新性地引入BERT语义相似度模型，对专利文本进行深度语义分析，筛选出与长护险政策目标高度契合的专利。同时，整合各城市层面的面板数据（包括区域GDP、研发投入强度等关键指标），构建了一个涵盖技术创新、经济发展和政策实施的多维时空数据库。并在此基础上进行去重，筛除异常值，结构化处理，为后续长护险政策效果评估提供了全面的数据支撑。</p>
+
+
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">二.相似度筛选</a>
+                                </h2>
+                            </div>
+
+                            <p> &emsp;&emsp;本研究在数据采集阶段采用多模态文本分析方法，首先对《长期护理保险制度试点指导意见》等核心政策文件进行文本挖掘，通过TF-IDF算法提取高频关键词，构建包含政策核心要素的语义特征池。随后，利用预训练语言模型（如BERT）对政策关键词进行向量化编码，形成政策语义特征向量空间。针对专利数据的中英文摘要，分别采用多语言预训练模型生成高维语义向量，并通过共享语义空间对齐技术实现跨语言表征。在相似度计算环节，创新性地采用加权融合策略（中文60%，英文40%），运用余弦相似度算法度量每条专利与政策特征的关联强度，最终设定0.45的科学阈值筛选出政策高相关专利。这一方法有效解决了跨语言政策文本与专利数据的语义匹配难题，为后续分析提供了精准的数据基础。</p>
+
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">三.双重差分建模</a>
+                                </h2>
+                            </div>
+
+                            <p> &emsp;&emsp;本文采用的是经典的双重差分模型（DID），并以此来评估长期护理保险试点政策对于长期护理技术创新的相关影响，模型设定遵循现有文献的计量规范。本文具体的双重差分模型如下式子所示：</p>
 
                             <div class="post-preview">
-                                <img src="images/data/first.png" alt=""
+                                <img src="images/data/formula.png" alt=""
                                     style="display: block; margin: 0 auto; max-width: 75%; height: auto;"
                                     class="img-fluid rounded">
                             </div>
 
-                            <p> &emsp;&emsp;2020年，长期护理保险试点范围扩大至49个城市，并首次明确由国家医保局统筹推进。新试点强调"独立险种"定位，探索单位和个人共同缴费的可持续筹资模式，部分地区将城乡居民纳入保障范围。重点完善了失能等级评估国家标准，推广"第六险"概念，鼓励商业保险参与经办服务。青岛、苏州等地创新"居家护理优先"政策，发展"互联网+护理"等新模式。</p>
+                            <p> &emsp;&emsp;其中，Treatc作为处理组虚拟变量（试点城市取1，否则为0），Postt作为政策时点的虚拟变量（2020年及之后取1，否则为0），而核心变量为Treatc×Postt即双重差分项（did）。另外系数β1反映政策净效应；Xct为控制变量集，包含对数GDP（ln_GDP）、研发投入强度（R&D_ratio）以及邻近效应（neighbor）；θc与λt分别表示城市和年份固定效应，用于吸收异质性，使模型稳定。模型估计采用了负二项回归（Negative Binomial Regression）的方式，以此来对标专利数据的过离散特征。</p>
 
-                            <div class="post-preview">
-                                <img src="images/data/second.png" alt=""
-                                    style="display: block; margin: 0 auto; max-width: 75%; height: auto;"
-                                    class="img-fluid rounded">
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">四.稳健性分析</a>
+                                </h2>
                             </div>
+
+                            <p> &emsp;&emsp;在完成双重差分模型（DID）对长期护理保险政策与市场创新关系的基准估计后，首先进行了系统的稳健性分析。证实了处理组和对照组在政策前确实满足平行趋势假设，且政策效应在实施后呈现持续增强的特征，这一发现进一步强化了研究结论的可信度。在此基础上，本文还深入考察了政策效应的异质性特征。分析发现，长期护理保险政策对市场创新的促进作用在不同地区间存在显著差异。具体而言，经济发达地区和研发密集型企业的政策响应更为明显，这可能与这些区域和主体具备更强的创新资源吸收能力有关。另外高老龄率的地区，对于政策的响应也更为明显，这也符合实际。</p>
 
                             <div class="mt-5">
                                 <h6>标签:</h6>
@@ -295,7 +313,7 @@
                                     医院和家中接受的长期医疗护理或者照顾性护理服务提供经济保障的保险。中国的长期护理保险是
                                     社会保险的一部分，被称为在养老、医疗、工伤、失业、生育五项社会保险之外的社保“第六险”。</p>
 
-                                <a href="standard-post.html" class="btn-read-more mt-2">了解更多<i
+                                <a href="background-1.html" class="btn-read-more mt-2">了解更多<i
                                         class="mdi mdi-arrow-right"></i></a>
                             </div>
                         </aside>
