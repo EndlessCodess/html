@@ -8,7 +8,6 @@ if (empty($_SESSION['csrf_token'])) {
 }
 ?>
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -217,22 +216,34 @@ if (empty($_SESSION['csrf_token'])) {
 
                     <!-- Post-->
                     <article class="post">
-                        <div class="text-center post-header">
-                            <h2 class="post-title"><a href="background-1.php" title="">长期护理</a>
-                            </h2>
-                        </div>
 
                         <div class="blog-detail-description">
-                            <p> &emsp;&emsp;长期护理（Long-Term Care, LTC）长期护理是指在一个较长的时期内，持续地为患有慢性疾病（Chronic
-                                illness），譬如早老性痴呆等认知障碍（Cognitive impairment）或处于伤残状态下，即功能性损伤（Functional
-                                impairment）的人提供的护理。这种护理包括：医疗服务、社会服务、居家服务、运送服务或其他支持性的服务。与传统家庭护理不同，长期护理强调服务的社会化、规范化和系统性，这其中不仅包括非正式的家庭成员照护，也涵盖了医疗机构、养老机构等专业机构提供的一些正式服务。
-                            </p>
 
-                            <p> &emsp;&emsp;从长期护理服务的对象来看，长期护理主要面向的是患有慢性疾病（如阿尔茨海默病）、退行性疾病或存在功能性损伤的群体，其中在这些人中，老年人口占比最高。例如，截至目前为止，我国的失能老年人口已经超过了3750万，空巢老人已经突破了1亿，这些都使专业护理的需求变的更加迫切。服务内容包括，但不局限于医疗护理（如压疮护理、鼻饲管置换、呼吸机使用指导）与生活照料（如协助进食、清洁护理、翻身叩背）。值得我们注意的是，目前长期护理已经突破了单纯的，只是作为生活辅助的范畴，逐步扩大为康复治疗、心理干预、临终关怀等更加多元化的服务
-                            </p>
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">双重差分模型</a>
+                                </h2>
+                            </div>
 
-                            <p> &emsp;&emsp;为什么大家如此重视长期护理，是因为其对于人权尊严的维护。世界卫生组织曾经强调，服务设计的理念首先需要尊重个体选择权，并且通过个性化的护理计划帮助患者实现“最大可能的自主参与”，例如允许失能老人自主选择护理时段、服务项目甚至临终关怀方式。而这种理念在我国青岛、绍兴等许多试点城市的实践中得到了体现。另外护理机构需要制定，以患者为中心的方案，并健全相应的机制确保服务透明性。因为随着人口老龄化不断加剧，长期护理已经从单一的家庭责任，转变为社会共担责任，它的发展水平直接关乎着整个社会的公平与和谐。
-                            </p>
+                            <p> &emsp;&emsp;<b>双重差分模型（Difference-in-Differences, DID）</b>​​是一种常用的政策评估方法，通过比较处理组和对照组在政策实施前后的差异来识别因果效应。其核心思路是进行两次差分：首先分别计算处理组和对照组在政策前后的结果变化，再将两组的变化值相减，最终得到的差值即为政策效应。这种方法通过引入处理组虚拟变量、时间虚拟变量及二者的交互项，将政策效应转化为可量化的回归系数。</p>
+                            
+                            <div class="post-preview">
+                                <img src="images/data/DID.png" alt="" style="display: block; margin: 0 auto; max-width: 75%; height: auto;" class="img-fluid rounded">
+                            </div>
+
+                            <p> &emsp;&emsp;<b>DID模型的有效性依赖于平行趋势假设</b>​​，即假设在没有政策干预的情况下，处理组和对照组的结果变化趋势应保持一致。为验证这一假设，研究者通常需进行政策实施前的趋势检验或事件研究分析。该模型适用于面板数据或重复横截面数据，在经济学、公共政策评估和医学研究等领域具有广泛应用，能够有效控制不可观测的混杂因素，提高政策效果评估的可靠性。</p> 
+
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">自然语言处理</a>
+                                </h2>
+                            </div>    
+
+                            <p> &emsp;&emsp;<b>​自然语言处理（Natural Language Processing, NLP）</b>是人工智能的核心领域之一，旨在让计算机能够理解、解释和生成人类语言。NLP 结合了计算机科学、语言学和机器学习，研究如何让机器处理文本或语音数据，执行诸如翻译、情感分析、文本摘要、问答系统等任务。早期的 NLP 依赖基于规则的方法（如语法解析）和统计模型（如隐马尔可夫模型），但随着深度学习的兴起，现代 NLP 主要采用神经网络，尤其是 Transformer 架构（如 BERT、GPT），能够更精准地捕捉语言的语义和上下文关系。NLP 的应用广泛，包括智能客服、搜索引擎优化、自动文本生成、语音识别等，是推动人机交互智能化的重要技术。</p> 
+
+                            <div class="post-preview">
+                                <img src="images/data/NLP.png" alt="" style="display: block; margin: 0 auto; max-width: 60%; height: auto;" class="img-fluid rounded">
+                            </div>
+
+                            <p> &emsp;&emsp;<b>Sentence-BERT（SBERT）</b>​​​​是针对句子语义相似度优化的BERT变体。它通过孪生网络结构对句子编码，生成固定长度的句向量，使相似度计算（如余弦相似度）更高效。相比原始BERT需遍历所有句子对，SBERT预存向量后直接比较，速度提升千倍，广泛应用于检索系统、聚类和语义匹配任务，成为NLP领域句子级表示的标杆模型。</p> 
 
                             <div class="mt-5">
                                 <h6>标签:</h6>
@@ -247,9 +258,7 @@ if (empty($_SESSION['csrf_token'])) {
                             </div>
 
 
-
-
-                            <!--comment start-->
+                             <!--comment start-->
                             <div class="mt-5">
                                 <h5 class="page-title-alt"><span>评论</span></h5>
                             </div>
@@ -442,8 +451,6 @@ if (empty($_SESSION['csrf_token'])) {
 
                             <!--comment end-->
 
-
-
                         </div>
 
                     </article>
@@ -454,10 +461,13 @@ if (empty($_SESSION['csrf_token'])) {
                 </div>
                 <!-- Content end-->
 
+
+               
             </div>
 
         </div> <!-- end container -->
     </section>
+
 
     <footer>
         <!-- instagram -->

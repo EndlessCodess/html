@@ -8,7 +8,6 @@ if (empty($_SESSION['csrf_token'])) {
 }
 ?>
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -217,22 +216,45 @@ if (empty($_SESSION['csrf_token'])) {
 
                     <!-- Post-->
                     <article class="post">
-                        <div class="text-center post-header">
-                            <h2 class="post-title"><a href="background-1.php" title="">长期护理</a>
-                            </h2>
-                        </div>
 
                         <div class="blog-detail-description">
-                            <p> &emsp;&emsp;长期护理（Long-Term Care, LTC）长期护理是指在一个较长的时期内，持续地为患有慢性疾病（Chronic
-                                illness），譬如早老性痴呆等认知障碍（Cognitive impairment）或处于伤残状态下，即功能性损伤（Functional
-                                impairment）的人提供的护理。这种护理包括：医疗服务、社会服务、居家服务、运送服务或其他支持性的服务。与传统家庭护理不同，长期护理强调服务的社会化、规范化和系统性，这其中不仅包括非正式的家庭成员照护，也涵盖了医疗机构、养老机构等专业机构提供的一些正式服务。
-                            </p>
 
-                            <p> &emsp;&emsp;从长期护理服务的对象来看，长期护理主要面向的是患有慢性疾病（如阿尔茨海默病）、退行性疾病或存在功能性损伤的群体，其中在这些人中，老年人口占比最高。例如，截至目前为止，我国的失能老年人口已经超过了3750万，空巢老人已经突破了1亿，这些都使专业护理的需求变的更加迫切。服务内容包括，但不局限于医疗护理（如压疮护理、鼻饲管置换、呼吸机使用指导）与生活照料（如协助进食、清洁护理、翻身叩背）。值得我们注意的是，目前长期护理已经突破了单纯的，只是作为生活辅助的范畴，逐步扩大为康复治疗、心理干预、临终关怀等更加多元化的服务
-                            </p>
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">一.数据预处理</a>
+                                </h2>
+                            </div>
 
-                            <p> &emsp;&emsp;为什么大家如此重视长期护理，是因为其对于人权尊严的维护。世界卫生组织曾经强调，服务设计的理念首先需要尊重个体选择权，并且通过个性化的护理计划帮助患者实现“最大可能的自主参与”，例如允许失能老人自主选择护理时段、服务项目甚至临终关怀方式。而这种理念在我国青岛、绍兴等许多试点城市的实践中得到了体现。另外护理机构需要制定，以患者为中心的方案，并健全相应的机制确保服务透明性。因为随着人口老龄化不断加剧，长期护理已经从单一的家庭责任，转变为社会共担责任，它的发展水平直接关乎着整个社会的公平与和谐。
-                            </p>
+                            <p> &emsp;&emsp;本研究利用IncoPat专利数据库，系统检索长期护理保险相关的专利数据（主要基于IPC分类号G16H50/30、A61B5/00等核心类别）。为提升数据精准度，创新性地引入BERT语义相似度模型，对专利文本进行深度语义分析，筛选出与长护险政策目标高度契合的专利。同时，整合各城市层面的面板数据（包括区域GDP、研发投入强度等关键指标），构建了一个涵盖技术创新、经济发展和政策实施的多维时空数据库。并在此基础上进行去重，筛除异常值，结构化处理，为后续长护险政策效果评估提供了全面的数据支撑。</p>
+
+
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">二.相似度筛选</a>
+                                </h2>
+                            </div>
+
+                            <p> &emsp;&emsp;本研究在数据采集阶段采用多模态文本分析方法，首先对《长期护理保险制度试点指导意见》等核心政策文件进行文本挖掘，通过TF-IDF算法提取高频关键词，构建包含政策核心要素的语义特征池。随后，利用预训练语言模型（如BERT）对政策关键词进行向量化编码，形成政策语义特征向量空间。针对专利数据的中英文摘要，分别采用多语言预训练模型生成高维语义向量，并通过共享语义空间对齐技术实现跨语言表征。在相似度计算环节，创新性地采用加权融合策略（中文60%，英文40%），运用余弦相似度算法度量每条专利与政策特征的关联强度，最终设定0.45的科学阈值筛选出政策高相关专利。这一方法有效解决了跨语言政策文本与专利数据的语义匹配难题，为后续分析提供了精准的数据基础。</p>
+
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">三.双重差分建模</a>
+                                </h2>
+                            </div>
+
+                            <p> &emsp;&emsp;本文采用的是经典的双重差分模型（DID），并以此来评估长期护理保险试点政策对于长期护理技术创新的相关影响，模型设定遵循现有文献的计量规范。本文具体的双重差分模型如下式子所示：</p>
+
+                            <div class="post-preview">
+                                <img src="images/data/formula.png" alt=""
+                                    style="display: block; margin: 0 auto; max-width: 75%; height: auto;"
+                                    class="img-fluid rounded">
+                            </div>
+
+                            <p> &emsp;&emsp;其中，Treatc作为处理组虚拟变量（试点城市取1，否则为0），Postt作为政策时点的虚拟变量（2020年及之后取1，否则为0），而核心变量为Treatc×Postt即双重差分项（did）。另外系数β1反映政策净效应；Xct为控制变量集，包含对数GDP（ln_GDP）、研发投入强度（R&D_ratio）以及邻近效应（neighbor）；θc与λt分别表示城市和年份固定效应，用于吸收异质性，使模型稳定。模型估计采用了负二项回归（Negative Binomial Regression）的方式，以此来对标专利数据的过离散特征。</p>
+
+                            <div class="text-center post-header">
+                                <h2 class="post-title"><a title="">四.稳健性分析</a>
+                                </h2>
+                            </div>
+
+                            <p> &emsp;&emsp;在完成双重差分模型（DID）对长期护理保险政策与市场创新关系的基准估计后，首先进行了系统的稳健性分析。证实了处理组和对照组在政策前确实满足平行趋势假设，且政策效应在实施后呈现持续增强的特征，这一发现进一步强化了研究结论的可信度。在此基础上，本文还深入考察了政策效应的异质性特征。分析发现，长期护理保险政策对市场创新的促进作用在不同地区间存在显著差异。具体而言，经济发达地区和研发密集型企业的政策响应更为明显，这可能与这些区域和主体具备更强的创新资源吸收能力有关。另外高老龄率的地区，对于政策的响应也更为明显，这也符合实际。</p>
 
                             <div class="mt-5">
                                 <h6>标签:</h6>
@@ -247,9 +269,7 @@ if (empty($_SESSION['csrf_token'])) {
                             </div>
 
 
-
-
-                            <!--comment start-->
+                             <!--comment start-->
                             <div class="mt-5">
                                 <h5 class="page-title-alt"><span>评论</span></h5>
                             </div>
@@ -442,8 +462,6 @@ if (empty($_SESSION['csrf_token'])) {
 
                             <!--comment end-->
 
-
-
                         </div>
 
                     </article>
@@ -454,10 +472,13 @@ if (empty($_SESSION['csrf_token'])) {
                 </div>
                 <!-- Content end-->
 
+
+                
             </div>
 
         </div> <!-- end container -->
     </section>
+
 
     <footer>
         <!-- instagram -->

@@ -8,7 +8,6 @@ if (empty($_SESSION['csrf_token'])) {
 }
 ?>
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -212,27 +211,23 @@ if (empty($_SESSION['csrf_token'])) {
                 </div>
                 <!-- Sidebar end-->
 
+
                 <!-- Content-->
                 <div class="col-lg-8 order-lg-1">
 
                     <!-- Post-->
                     <article class="post">
                         <div class="text-center post-header">
-                            <h2 class="post-title"><a href="background-1.php" title="">长期护理</a>
+                            <h2 class="post-title"><a href="regression.php" title="">回归结果分析</a>
                             </h2>
                         </div>
 
                         <div class="blog-detail-description">
-                            <p> &emsp;&emsp;长期护理（Long-Term Care, LTC）长期护理是指在一个较长的时期内，持续地为患有慢性疾病（Chronic
-                                illness），譬如早老性痴呆等认知障碍（Cognitive impairment）或处于伤残状态下，即功能性损伤（Functional
-                                impairment）的人提供的护理。这种护理包括：医疗服务、社会服务、居家服务、运送服务或其他支持性的服务。与传统家庭护理不同，长期护理强调服务的社会化、规范化和系统性，这其中不仅包括非正式的家庭成员照护，也涵盖了医疗机构、养老机构等专业机构提供的一些正式服务。
-                            </p>
+                            <p> &emsp;&emsp;本文一共利用了52735个专利观测样本，通过负二项回归模型的方式来检验长期护理保险政策，对于长期护理相关专利创新的影响研究。通过实证结果，我们可以发现，模型的伪R²为0.2445，表明模型的解释力较强。而在核心变量中，双重交叉项did的系数为0.144（p=0.021），转化为发生率比IRR，表明长期护理保险政策在实施后，对于试点城市的长期护理产业的专利创新，有积极的促进作用，平均使得相应专利数量提升了15.5%，验证了本文的核心假设。经济规模（ln_GDP）系数为0.436（p<0.01），这表明地区GDP每增长1%，相应的专利产出的增加比例约为54.7%，这也符合经济基础对技术创新的支撑作用。研发强度（R&D_ratio）系数为0.106（p=0.011），这表明区域的研发投入，每提高1%，它的专利数量大致增长为原来的1.12倍，这也符合加大科研投入，对于专利创新的促进作用。值得注意的是，邻近效应（neighbor）系数为-0.216（p<0.01），这表明邻近城市每增加1%的专利量，本地的专利反而会减少约19.5%，这种情况的出现，可能源于区域竞争而导致出现的资源虹吸现象。总的来说，长期护理保险政策，不仅直接促进了相应产业的创新，并且还表现出了显著的经济规模依赖性以及空间异质性。</p>
 
-                            <p> &emsp;&emsp;从长期护理服务的对象来看，长期护理主要面向的是患有慢性疾病（如阿尔茨海默病）、退行性疾病或存在功能性损伤的群体，其中在这些人中，老年人口占比最高。例如，截至目前为止，我国的失能老年人口已经超过了3750万，空巢老人已经突破了1亿，这些都使专业护理的需求变的更加迫切。服务内容包括，但不局限于医疗护理（如压疮护理、鼻饲管置换、呼吸机使用指导）与生活照料（如协助进食、清洁护理、翻身叩背）。值得我们注意的是，目前长期护理已经突破了单纯的，只是作为生活辅助的范畴，逐步扩大为康复治疗、心理干预、临终关怀等更加多元化的服务
-                            </p>
-
-                            <p> &emsp;&emsp;为什么大家如此重视长期护理，是因为其对于人权尊严的维护。世界卫生组织曾经强调，服务设计的理念首先需要尊重个体选择权，并且通过个性化的护理计划帮助患者实现“最大可能的自主参与”，例如允许失能老人自主选择护理时段、服务项目甚至临终关怀方式。而这种理念在我国青岛、绍兴等许多试点城市的实践中得到了体现。另外护理机构需要制定，以患者为中心的方案，并健全相应的机制确保服务透明性。因为随着人口老龄化不断加剧，长期护理已经从单一的家庭责任，转变为社会共担责任，它的发展水平直接关乎着整个社会的公平与和谐。
-                            </p>
+                            <div class="post-preview">
+                                <img src="images/data/result.png" alt="" style="display: block; margin: 0 auto; max-width: 60%; height: auto;" class="img-fluid rounded">
+                            </div>
 
                             <div class="mt-5">
                                 <h6>标签:</h6>
@@ -247,9 +242,7 @@ if (empty($_SESSION['csrf_token'])) {
                             </div>
 
 
-
-
-                            <!--comment start-->
+                             <!--comment start-->
                             <div class="mt-5">
                                 <h5 class="page-title-alt"><span>评论</span></h5>
                             </div>
@@ -441,9 +434,6 @@ if (empty($_SESSION['csrf_token'])) {
 
 
                             <!--comment end-->
-
-
-
                         </div>
 
                     </article>
@@ -454,10 +444,13 @@ if (empty($_SESSION['csrf_token'])) {
                 </div>
                 <!-- Content end-->
 
+
+                
             </div>
 
         </div> <!-- end container -->
     </section>
+
 
     <footer>
         <!-- instagram -->

@@ -8,7 +8,6 @@ if (empty($_SESSION['csrf_token'])) {
 }
 ?>
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -218,21 +217,18 @@ if (empty($_SESSION['csrf_token'])) {
                     <!-- Post-->
                     <article class="post">
                         <div class="text-center post-header">
-                            <h2 class="post-title"><a href="background-1.php" title="">长期护理</a>
+                            <h2 class="post-title"><a href="old-ratio.php" title="">老龄率异质性分析</a>
                             </h2>
                         </div>
 
                         <div class="blog-detail-description">
-                            <p> &emsp;&emsp;长期护理（Long-Term Care, LTC）长期护理是指在一个较长的时期内，持续地为患有慢性疾病（Chronic
-                                illness），譬如早老性痴呆等认知障碍（Cognitive impairment）或处于伤残状态下，即功能性损伤（Functional
-                                impairment）的人提供的护理。这种护理包括：医疗服务、社会服务、居家服务、运送服务或其他支持性的服务。与传统家庭护理不同，长期护理强调服务的社会化、规范化和系统性，这其中不仅包括非正式的家庭成员照护，也涵盖了医疗机构、养老机构等专业机构提供的一些正式服务。
-                            </p>
+                            <p> &emsp;&emsp;本文利用不同城市的老龄化率，来研究长期护理保险政策的异质性特征。最终研究结果显示，相较于低老龄化组和中老龄化组，高老龄化组的相应产业的专利创新更多，IRR为2.27（p<0.001），这表明在高老龄化率的试点城市，长期护理政策使得长期护理方面的专利创新提高至2.27倍，这也正好印证了“需求驱动创新”理论。而对于低老龄化组（IRR=0.80），以及中老龄化组（IRR=0.90）来说，长期护理保险政策对于这些试点城市的影响较小，可能陷入了供给过多，从而导致创新一直的情况。</p>
 
-                            <p> &emsp;&emsp;从长期护理服务的对象来看，长期护理主要面向的是患有慢性疾病（如阿尔茨海默病）、退行性疾病或存在功能性损伤的群体，其中在这些人中，老年人口占比最高。例如，截至目前为止，我国的失能老年人口已经超过了3750万，空巢老人已经突破了1亿，这些都使专业护理的需求变的更加迫切。服务内容包括，但不局限于医疗护理（如压疮护理、鼻饲管置换、呼吸机使用指导）与生活照料（如协助进食、清洁护理、翻身叩背）。值得我们注意的是，目前长期护理已经突破了单纯的，只是作为生活辅助的范畴，逐步扩大为康复治疗、心理干预、临终关怀等更加多元化的服务
-                            </p>
+                            <p> &emsp;&emsp;另外值得注意的是，老龄化率与政策的交互效应也呈现出了边际显著（IRR=1.102，p=0.06）。这一数据表明，试点城市老龄化率每提升1个百分点，政策对专利产出的促进作用将会更高，大致提升了10.2%。这一发现可能为差异化政策设计提供一些启示，在高老龄化区域（如上海、南通），应着力进行税收减免，财政补贴，风险共担的方式，来减轻相关企业的负担，进而加速智能护理设备（如防褥疮监测系统）的产出；而在一些低老龄化区域（如深圳、东莞），需通过加强宣传的方式，重点传播长期护理方面的基本常识，以及政府带头进行长期护理方面的研究，深入人心，从而激活潜在的市场需求。</p>
 
-                            <p> &emsp;&emsp;为什么大家如此重视长期护理，是因为其对于人权尊严的维护。世界卫生组织曾经强调，服务设计的理念首先需要尊重个体选择权，并且通过个性化的护理计划帮助患者实现“最大可能的自主参与”，例如允许失能老人自主选择护理时段、服务项目甚至临终关怀方式。而这种理念在我国青岛、绍兴等许多试点城市的实践中得到了体现。另外护理机构需要制定，以患者为中心的方案，并健全相应的机制确保服务透明性。因为随着人口老龄化不断加剧，长期护理已经从单一的家庭责任，转变为社会共担责任，它的发展水平直接关乎着整个社会的公平与和谐。
-                            </p>
+                            <div class="post-preview">
+                                <img src="images/data/old.png" alt="" style="display: block; margin: 0 auto; max-width: 60%; height: auto;" class="img-fluid rounded">
+                            </div>
 
                             <div class="mt-5">
                                 <h6>标签:</h6>
@@ -247,9 +243,7 @@ if (empty($_SESSION['csrf_token'])) {
                             </div>
 
 
-
-
-                            <!--comment start-->
+                             <!--comment start-->
                             <div class="mt-5">
                                 <h5 class="page-title-alt"><span>评论</span></h5>
                             </div>
@@ -441,9 +435,6 @@ if (empty($_SESSION['csrf_token'])) {
 
 
                             <!--comment end-->
-
-
-
                         </div>
 
                     </article>
@@ -454,10 +445,13 @@ if (empty($_SESSION['csrf_token'])) {
                 </div>
                 <!-- Content end-->
 
+
+                
             </div>
 
         </div> <!-- end container -->
     </section>
+
 
     <footer>
         <!-- instagram -->
